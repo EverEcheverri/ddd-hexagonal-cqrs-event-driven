@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "7c0778e9-6085-4ba0-a322-638adc45b2a0",
+		"name": "EventSagaDriven",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1537194"
+	},
+	"item": [
+		{
+			"name": "Saga/api/Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"ever@email.com\",\r\n  \"userName\": \"Ever\",\r\n  \"cityId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"mobile\": \"3117423946\",\r\n  \"accountType\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7096/api/Account"
+			},
+			"response": []
+		},
+		{
+			"name": "Saga/api/ThirdPartyBooks?genres=biography&genres=action",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7096/api/ThirdPartyBooks?genres=biography&genres=action",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7096",
+					"path": [
+						"api",
+						"ThirdPartyBooks"
+					],
+					"query": [
+						{
+							"key": "genres",
+							"value": "art",
+							"disabled": true
+						},
+						{
+							"key": "genres",
+							"value": "biography"
+						},
+						{
+							"key": "genres",
+							"value": "action"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saga/api/Genres",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ever@email.com\",\r\n  \"genreIds\": [\r\n    \"7c9c3d92-40c1-4ac3-95dc-fd2916e1beda\",\r\n    \"a2e70464-ad92-45e5-98a6-60d3169db78e\",\r\n    \"dc0a9d65-aa58-46a3-8e05-d44779563ad9\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7096/api/Genres"
+			},
+			"response": []
+		},
+		{
+			"name": "Saga/api/ever@email.com/Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7096/api/Account/email?email=ever@email.com",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7096",
+					"path": [
+						"api",
+						"Account",
+						"email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ever@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

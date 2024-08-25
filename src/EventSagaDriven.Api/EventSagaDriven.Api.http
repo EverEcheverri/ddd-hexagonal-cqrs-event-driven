@@ -1,0 +1,6 @@
+@EventSagaDriven.Api_HostAddress = http://localhost:5074
+
+GET {{EventSagaDriven.Api_HostAddress}}/account/
+Accept: application/json
+
+###
